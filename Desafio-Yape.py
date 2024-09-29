@@ -90,8 +90,6 @@ driver.tap([(939, 1891.9)])
 driver.find_element(By.XPATH, '//android.widget.TextView[@resource-id="com.booking:id/rooms_item_select_text_view"]').click()
 
 #Seleccionar reserva
-#driver.find_element(By.XPATH, '//android.widget.Button[@resource-id="com.booking:id/main_action"]').click()
-
 driver.find_element(By.XPATH, '//android.widget.FrameLayout[@resource-id="com.booking:id/main_action"]').click()
 time.sleep(t)
 
