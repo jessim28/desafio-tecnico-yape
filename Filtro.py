@@ -1,7 +1,3 @@
-from asyncio import timeout
-from calendar import calendar
-from lib2to3.pgen2.driver import Driver
-from os import times, wait
 import time
 from selenium.webdriver.common.by import By
 
@@ -24,7 +20,10 @@ time.sleep(t)
 driver.find_element(By.XPATH, '//android.widget.TextView[@resource-id="com.booking:id/toolbar_item_label" and @text="Filter"]').click()
 time.sleep(t)
 
-driver.find_element(By.XPATH, '//android.widget.TextView[@resource-id="com.booking:id/text" and @text="US$0 - US$1,200 ⁦(311)"]').click()
+driver.find_element(By.XPATH, '(//android.view.ViewGroup[@resource-id="com.booking:id/filter_layout"])[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout').click()
+time.sleep(t)
+
+driver.find_element(By.XPATH, '//android.widget.Button[@resource-id="com.booking:id/apply_button"]').click()
 time.sleep(t)
 
 #Cerrar la aplicación
